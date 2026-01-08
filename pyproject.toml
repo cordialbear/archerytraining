@@ -1,0 +1,37 @@
+[project]
+name = "archerytraining"
+version = "0.1.0"
+description = "射箭训练辅助系统（摄像头取流 + YOLO 姿态检测 + Tkinter 界面）"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "HuiGao", email = "25224339@qq.com" },
+]
+
+dependencies = [
+  "opencv-python>=4.8.0",
+  "numpy>=1.24.0",
+  "ultralytics>=8.0.0",
+  "pydantic>=2.0.0",
+  "pillow>=10.0.0",
+  "requests>=2.31.0",
+  "picamera2; platform_system == \"Linux\"",  # 仅在树莓派等 Linux 设备上需要
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+package = true
+
+[[tool.uv.index]]
+url = "https://pypi.org/simple"
+default = true
+
+
