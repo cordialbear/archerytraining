@@ -1,0 +1,20 @@
+# 射箭训练辅助系统配置文件
+
+# 摄像头配置
+camera:
+  # 摄像头类型: "picamera" (树莓派摄像头) 或 "usb0", "usb1" 等 (USB摄像头)
+  source: "picamera"
+  # 图像分辨率 (宽x高)
+  resolution: "640x480"
+  # 帧率
+  fps: 30
+
+# 检测配置
+detection:
+  # 是否默认启用姿态检测 (YOLO-Pose)
+  pose_detection_enabled: false
+  # 姿态检测模型路径
+  pose_model_path: "models/yolov8n-pose_ncnn"
+  # 箭支检测模型路径
+  target_model_path: "models/target-yolov8_ncnn"
+  arrow_model_path: "models/arrowV1-model_ncnn"

@@ -103,7 +103,7 @@ class PostDetection:
     def __init__(
         self,
         capture: CameraCapture,
-        model_path: str = "yolov8n-pose.pt",
+        model_path: str = "models/yolov8n-pose_ncnn",
         conf: float = 0.5,
     ) -> None:
         from ultralytics import YOLO

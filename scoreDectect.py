@@ -56,8 +56,8 @@ class ScoreDetector:
     使用示例::
 
         detector = ScoreDetector(
-            target_model_path="weights/target-yolov8.pt",
-            arrow_model_path="weights/arrowV1-model.pt",
+            target_model_path="models/target-yolov8_ncnn",
+            arrow_model_path="models/arrowV1-model_ncnn",
         )
         image = cv2.imread("test.jpg")
         results = detector.detect(image)
